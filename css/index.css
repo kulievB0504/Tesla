@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.reserve__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 115px;
+    padding-bottom: 50px;
+}
+
+.peice {
+    color: #707070;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pecie {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.kilometers,
+.tesla_price {
+    margin-top: 12px;
+    color: #000;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.tesla_internal_settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    padding-bottom: 100px;
+}
+
+.tesla__speed_box,
+.tesla__thermometer_box,
+.tesla__wheels_box {
+    display: flex;
+    align-items: flex-end;
+    gap: 34px;
+}
+
+.tesla__aircondition {
+    display: flex;
+    gap: 8px;
+}
+
+.tesla_kilometer_speed,
+.tesla_thermometer,
+.tesla_wheels {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.potentiometer,
+.potentiometer_thermometer,
+.potentiometer_wheels {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.potentiometer img,
+.potentiometer_thermometer img,
+.potentiometer_wheels img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.tesla__aircondition {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 40px;
+    /* ширина */
+    height: 21px;
+    /* высота */
+    border-radius: 19px;
+    /* радиус скругления */
+    background: #bfbfbf;
+    /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms;
+    /* анимация */
+}
+
+.switch-btn::after {
+    content: "";
+    height: 15px;
+    /* высота кнопки */
+    width: 15px;
+    /* ширина кнопки */
+    border-radius: 17px;
+    background: #fff;
+    /* цвет кнопки */
+    top: 3px;
+    /* положение кнопки по вертикали относительно основы */
+    left: 2px;
+    /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms;
+    /* анимация */
+    position: absolute;
+    z-index: 1;
+}
+
+.switch-on {
+    background: blue;
+}
+
+.switch-on::after {
+    left: 22.7px;
+}
+
+.tesla_box {
+    width: 1200px;
+    position: relative;
+    height: 400px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.tesla_box_img {
+    display: flex;
+    position: absolute;
+}
+
+.tesla_wheels_img img {
+    object-fit: cover;
+    background-position: center;
+    
+    animation: rotating 2s linear infinite;
+}
+
+.tesla_wheels_img:nth-child(1) {
+    object-fit: cover;
+    position: absolute;
+    left: 290px;
+    top: 185px;
+}
+
+.tesla_wheels_img:nth-child(2) {
+    object-fit: cover;
+    position: absolute;
+    left: 769px;
+    top: 183px;
+}
+
+@keyframes rotating {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+.tesla_wheels_img img {
+    width: 126px;
+    object-fit: cover;
+}
